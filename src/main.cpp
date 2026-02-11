@@ -9,26 +9,30 @@
 #define OLED_ADDR 0x3C
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
-void setup() {
+
+void setup()
+{
     Serial.begin(9600);
-        if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
-            Serial.println(F("OLED not found"));
-            while (true);
-        }
-        display.clearDisplay();
-        display.setTextSize(1);
-        display.setTextColor(WHITE);
+    if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR))
+    {
+        Serial.println(F("OLED not found"));
+        while (true);
+    }
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(WHITE);
 
-        display.setCursor(0, 0);
-        display.println("Arduino UNO R4");
-        display.println("OLED with I2C");
-        display.println("HELLO WORLD");
-        display.display();
+    display.setCursor(0, 0);
+    display.println("Arduino UNO R4");
+    display.println("OLED with I2C");
+    display.println("HELLO WORLD");
+    display.display();
 
 
-// write your initialization code here
+    // write your initialization code here
 }
 
-void loop() {
-// write your code here
+void loop()
+{
+    // write your code here
 }
