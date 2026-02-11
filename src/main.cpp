@@ -16,6 +16,9 @@ void setup() {
             while (true);
         }
         display.clearDisplay();
+        display.setTextSize(1);
+        display.setTextColor(WHITE);
+
 
 // write your initialization code here
 }
