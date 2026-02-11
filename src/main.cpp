@@ -15,6 +15,7 @@ void setup() {
             Serial.println(F("OLED not found"));
             while (true);
         }
+        display.clearDisplay();
 
 // write your initialization code here
 }
